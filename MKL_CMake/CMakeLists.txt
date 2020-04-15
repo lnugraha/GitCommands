@@ -10,8 +10,6 @@ if ("$ENV{MKLROOT}" STREQUAL "")
   message(FATAL_ERROR "MKLROOT is not set. Please source the Intel MKL mklvars.sh file.")
 endif()
 
-find_package(GTest REQUIRED)
-
 # user defined options for MKL
 option(MKL_USE_parallel "Use MKL parallel" True)
 option(MKL_USE_sdl "Single Dynamic Library or static/dynamic" False)
@@ -23,6 +21,8 @@ else()
   set(MKL_USE_parallel ON)
 endif()
 
+# find_package(GTest REQUIRED) # unit testing purpose
+# find_package(Boost REQUIRED) # multi purpose
 find_package(MKL REQUIRED)
 
 if (MKL_FOUND)
