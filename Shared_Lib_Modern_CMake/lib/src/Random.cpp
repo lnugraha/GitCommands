@@ -1,26 +1,39 @@
 #include "Random.hpp"
 
 void randMatrix(double *A, int row, int col){
-  srand((long)time(NULL));
+  // srand((long)time(0));
+  std::random_device seed;
+  std::mt19937 engine(seed());
+  std::uniform_real_distribution<double> dist(0.0, 1.0);
+  
   for (int i=0; i<row; ++i){
     for (int j=0; j<col; ++j){
       int idx = i*col + j;
-      A[idx] = rand()/(double)RAND_MAX;
+      A[idx] = dist(engine); // rand()/(double)RAND_MAX;
     }
   }
 }
 
 void randMatrix(double **A, int row, int col){
-  srand((long)time(NULL));
-  for (int i=0; i<row; ++i)
-  {
-    for (int j=0; j<col; ++j) A[i][j] = rand()/(double)RAND_MAX;
-  }
+  // srand((long)time(NULL));
+  std::random_device seed;
+  std::mt19937 engine(seed());
+  std::uniform_int_distribution<double> dist(0.0, 1.0);
+  
+  for (int i=0; i<row; ++i){
+    for (int j=0; j<col; ++j){
+      A[i][j] = dist(engine); // rand()/(double)RAND_MAX;
+    } // END-FOR j
+  } // END-FOR i
 }
 
 void randVector(double *A, int size){
-  srand((long)time(NULL));
-  for (int i=0; i<size; ++i) A[i] = rand()/(double)RAND_MAX;
+  // srand((long)time(NULL));
+  std::random_device seed;
+  std::mt19937 engine(seed());
+  std::uniform_int_distribution<double> dist(0.0, 1.0);
+  
+  for (int i=0; i<size; ++i) A[i] = dist(engine); // rand()/(double)RAND_MAX;
 }
 
 void displayMatrix(double **M, int row, int col){
