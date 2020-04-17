@@ -1,39 +1,32 @@
 #include "Random.hpp"
 
-void randMatrix(double *A, int row, int col){
-  // srand((long)time(0));
+template<typename T>
+static T randReal(T min=0.0, T max=1.0){
   std::random_device seed;
   std::mt19937 engine(seed());
-  std::uniform_real_distribution<double> dist(0.0, 1.0);
-  
+  std::uniform_real_distribution<T> dist(min, max);
+  return dist(engine);
+}
+
+
+void randMatrix(double *A, int row, int col){
   for (int i=0; i<row; ++i){
     for (int j=0; j<col; ++j){
       int idx = i*col + j;
-      A[idx] = dist(engine); // rand()/(double)RAND_MAX;
+      A[idx] = randReal<double>();
     }
   }
 }
 
 void randMatrix(double **A, int row, int col){
-  // srand((long)time(NULL));
-  std::random_device seed;
-  std::mt19937 engine(seed());
-  std::uniform_int_distribution<double> dist(0.0, 1.0);
-  
   for (int i=0; i<row; ++i){
-    for (int j=0; j<col; ++j){
-      A[i][j] = dist(engine); // rand()/(double)RAND_MAX;
+    for (int j=0; j<col; ++j){ A[i][j] = randReal<double>();
     } // END-FOR j
   } // END-FOR i
 }
 
 void randVector(double *A, int size){
-  // srand((long)time(NULL));
-  std::random_device seed;
-  std::mt19937 engine(seed());
-  std::uniform_int_distribution<double> dist(0.0, 1.0);
-  
-  for (int i=0; i<size; ++i) A[i] = dist(engine); // rand()/(double)RAND_MAX;
+  for (int i=0; i<size; ++i) A[i] = randReal<double>(); 
 }
 
 void displayMatrix(double **M, int row, int col){
