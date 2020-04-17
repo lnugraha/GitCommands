@@ -1,0 +1,9 @@
+/Users/war-machine/Documents/GitHub/git-and-scripts/Shared_Lib_Modern_CMake/build/CMakeFiles/rebuild_cache.dir
+/Users/war-machine/Documents/GitHub/git-and-scripts/Shared_Lib_Modern_CMake/build/CMakeFiles/edit_cache.dir
+/Users/war-machine/Documents/GitHub/git-and-scripts/Shared_Lib_Modern_CMake/build/lib/CMakeFiles/rebuild_cache.dir
+/Users/war-machine/Documents/GitHub/git-and-scripts/Shared_Lib_Modern_CMake/build/lib/CMakeFiles/edit_cache.dir
+/Users/war-machine/Documents/GitHub/git-and-scripts/Shared_Lib_Modern_CMake/build/lib/CMakeFiles/basicmath.dir
+/Users/war-machine/Documents/GitHub/git-and-scripts/Shared_Lib_Modern_CMake/build/lib/CMakeFiles/MtxLib_ObjLib.dir
+/Users/war-machine/Documents/GitHub/git-and-scripts/Shared_Lib_Modern_CMake/build/app/CMakeFiles/rebuild_cache.dir
+/Users/war-machine/Documents/GitHub/git-and-scripts/Shared_Lib_Modern_CMake/build/app/CMakeFiles/edit_cache.dir
+/Users/war-machine/Documents/GitHub/git-and-scripts/Shared_Lib_Modern_CMake/build/app/CMakeFiles/MatrixCalculator.dir
