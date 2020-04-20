@@ -5,7 +5,7 @@
 ############################################################ 
 
 function delBranch(){
-  if [[ $# -eq 0]]; then
+  if [[ $# -eq 0 ]]; then
     echo "Please specify the branch name that will be deleted";
   else:  
     git pull origin master;
