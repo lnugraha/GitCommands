@@ -13,7 +13,7 @@ target_include_directories( MtxLib_ObjLib
   PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include" )
 
 add_library( basicmath SHARED )
-target_link_libraries( basicmath PUBLIC MtxLib_ObjLib )
+target_link_libraries( basicmath PUBLIC MtxLib_ObjLib GSL::gslcblas )
 
 add_library( MatrixToolbox::basicmath ALIAS basicmath )
 
