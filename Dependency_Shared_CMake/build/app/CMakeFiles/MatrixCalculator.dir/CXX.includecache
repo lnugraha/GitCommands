@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../lib/include/DenseMatrix.hpp
+stdio.h
+-
+stdlib.h
+-
+
+../lib/include/Random.hpp
+stdio.h
+-
+stdlib.h
+-
+time.h
+-
+chrono
+-
+future
+-
+random
+-
+numeric
+-
+
+/Users/war-machine/Documents/GitHub/git-and-scripts/Dependency_Shared_CMake/app/src/main.cpp
+iostream
+-
+DenseMatrix.hpp
+/Users/war-machine/Documents/GitHub/git-and-scripts/Dependency_Shared_CMake/app/src/DenseMatrix.hpp
+Random.hpp
+/Users/war-machine/Documents/GitHub/git-and-scripts/Dependency_Shared_CMake/app/src/Random.hpp
+mkl.h
+-
+

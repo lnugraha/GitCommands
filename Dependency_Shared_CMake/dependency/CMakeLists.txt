@@ -1,2 +1,2 @@
 add_subdirectory( boost )
-add_subdirectory( boost_package )
+add_subdirectory( intel_mkl )
