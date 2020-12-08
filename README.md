@@ -19,3 +19,15 @@ git commit -am "Write your comments here!"
 ```
 git clone -b develop git@repository_full_address_here.git
 ```
+
+# List of UNIX commands that are frequently used
+
+## Check the last 25 commands ##
+```
+history | tail -25
+```
+
+## Check the last 25 commands that contained the aforementioned keyword ##
+```
+history | grep cp | tail -25
+```
