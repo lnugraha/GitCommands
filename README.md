@@ -29,5 +29,11 @@ history | tail -25
 
 ## Check the last 25 commands that contained the aforementioned keyword ##
 ```
-history | grep cp | tail -25
+history | grep echo | tail -25
+```
+
+## Kill a specific running process
+```
+ps -au
+kill -9 process_number_to_be_killed
 ```
