@@ -37,3 +37,42 @@ history | grep echo | tail -25
 ps -au
 kill -9 process_number_to_be_killed
 ```
+
+# List of macOS / OSX command lines that can potentially be really helpful 
+
+## Enable or Disable Start-Up Chime (Pre macOS 11.0)
+```
+// Enable start-up chime
+sudo nvram BootAudio=%01
+
+// Disable start-up chime
+sudo nvram BootAudio=%00
+```
+
+## Enable of Disable Power Chime (only when plugging MacBooks to a charging cable)
+```
+// Enable power chime
+defaults write com.apple.PowerChime ChimeOnAllHardware -bool TRUE; open /System/Library/CoreServices/PowerChime.app & 
+
+// Disable power chime
+defaults write com.apple.PowerChime ChimeOnAllHardware -bool FALSE; killall PowerChime
+```
+
+## Listen to Power Chime
+```
+afplay /System/Library/CoreServices/PowerChime.app/Contents/Resources/connect_power.aif
+```
+
+## Enable or Disable Power On through Opening Lid
+```
+// Enable boot-up by lid-lifting
+sudo nvram AutoBoot=%03
+
+// Disable boot-up by lid-lifting 
+sudo nvram AutoBoot=%00
+```
+
+## Remove shadow effect on screenshot
+```
+defaults write com.apple.screencapture disable-shadow -bool TRUE
+```
