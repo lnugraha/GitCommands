@@ -38,10 +38,10 @@ ps -au
 kill -9 process_number_to_be_killed
 ```
 
-# List of macOS / OSX command lines that can potentially be really helpful 
+# List of OSX command lines that can be helpful 
 
 ## Enable or Disable Start-Up Chime (Pre macOS 11.0)
-```
+```bash
 // Enable start-up chime
 sudo nvram BootAudio=%01
 
@@ -50,7 +50,7 @@ sudo nvram BootAudio=%00
 ```
 
 ## Enable of Disable Power Chime (only when plugging MacBooks to a charging cable)
-```
+```bash
 // Enable power chime
 defaults write com.apple.PowerChime ChimeOnAllHardware -bool TRUE; open /System/Library/CoreServices/PowerChime.app & 
 
@@ -59,13 +59,14 @@ defaults write com.apple.PowerChime ChimeOnAllHardware -bool FALSE; killall Powe
 ```
 
 ## Listen to Power Chime
-```
+```bash
+// This sound indicates that your MacBook is charging upon plugging in power cables
 afplay /System/Library/CoreServices/PowerChime.app/Contents/Resources/connect_power.aif
 ```
 
 ## Enable or Disable Power On through Opening Lid
-```
-// Enable boot-up by lid-lifting
+```bash
+// Enable boot-up by lid-lifting (default configuration)
 sudo nvram AutoBoot=%03
 
 // Disable boot-up by lid-lifting 
@@ -73,6 +74,10 @@ sudo nvram AutoBoot=%00
 ```
 
 ## Remove shadow effect on screenshot
-```
+```bash
+// Disable shadow effect
 defaults write com.apple.screencapture disable-shadow -bool TRUE
+
+// Enable shadow effect (default configuration)
+defaults write com.apple.screencapture disable-shadow -bool FALSE
 ```
