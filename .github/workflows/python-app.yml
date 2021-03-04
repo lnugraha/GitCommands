@@ -4,10 +4,9 @@
 name: Python Automated Testing and Deployment Template Design
 
 on:
-  push:
-  pull_request:
+  # push:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: "*/3 * * * *"
   # push:
   #   branches: [ master ]
   # pull_request:
@@ -21,7 +20,7 @@ jobs:
     strategy: 
       matrix:
         python-version: [3.7, 3.8, 3.9]
-        os: [ubuntu-latest, macos-latest]
+        os: [ubuntu-18.04, ubuntu-16.04, macos-latest]
         
     steps:
     - uses: actions/checkout@v2
