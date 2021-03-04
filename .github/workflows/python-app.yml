@@ -5,8 +5,9 @@ name: Python Automated Testing and Deployment Template Design
 
 on:
   push:
+  pull_request:
   schedule:
-    - cron: "0,10,20,30,40,50 * * * *"
+    - cron: "0,5,10,15,20,25,30,35,40,45,50,55 * * * *"
   # push:
   #   branches: [ master ]
   # pull_request:
