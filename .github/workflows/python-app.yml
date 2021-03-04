@@ -29,7 +29,6 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: ${{ matrix.python-version }}
-        architecture: 'x86'
     - name: Display all Python versions
       run: python -c "import sys; print(sys.version)"
         
