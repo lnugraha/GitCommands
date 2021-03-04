@@ -6,7 +6,7 @@ name: Python Automated Testing and Deployment Template Design
 on:
   # push:
   schedule:
-    - cron: "*/30 * * * *"
+    - cron: "0,15,30,45 * * * *"
   # push:
   #   branches: [ master ]
   # pull_request:
