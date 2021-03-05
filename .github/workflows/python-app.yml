@@ -4,10 +4,10 @@
 name: Python Automated Testing and Deployment Template Design
 
 on:
-  # push:
-  # pull_request:
+  push:
+  pull_request:
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "0 */4 * * *"
   # push:
   #   branches: [ master ]
   # pull_request:
