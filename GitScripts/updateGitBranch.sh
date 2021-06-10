@@ -13,7 +13,7 @@ function autoPush(){
   fi
 
   git push;
-  echo "Commit has been successfully pushed to master brnch";
+  echo "Commit has been successfully pushed to master branch";
 }
 
 autoPush $1
