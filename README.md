@@ -7,6 +7,12 @@ The following shell scripts list all functions that contain all git commands
 2. **newGitBranch.sh** - Create a new branch and push it straight to the remote repository
 3. **deleteGitBranch.sh** - Delete a specific branch in a repository and push it to the remote repository (make sure that you have commited to the remote or stash, and are not in the to-be-deleted branch)
 
+## New Git Commands via Tokens ##
+```
+git remote set-url origin https://<token_number_here>@github.com/lnugraha/repository_name.git
+git push -u origin main
+```
+
 ### Hard Reset Branch ###
 ```
 git reset --hard <version_number>
